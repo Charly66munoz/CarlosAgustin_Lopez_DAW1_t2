@@ -3,14 +3,14 @@ package model;
 public class Coche {
 
     private String marca, modelo, matricula;
-    private int cv;
-    private double  cc ,velocidad, km;
+    private int cv, velocidad, km, cc, aceleracion;
+
 
     public Coche(){
 
     }
 
-    public Coche (String marca, String modelo, String matricula, int cv, double cc, double velocidad, double km){
+    public Coche (String marca, String modelo, String matricula, int cv, int cc, int velocidad, int km, int aceleracion){
         this.marca = marca;
         this.modelo = modelo;
         this.matricula = matricula;
@@ -18,6 +18,8 @@ public class Coche {
         this.cc = cc;
         this.velocidad = velocidad;
         this.km = km;
+        this.aceleracion = aceleracion;
+        // 1km == 1000
     }
 
     public void mostrarValores() {
@@ -26,10 +28,17 @@ public class Coche {
         System.out.println("Matrícula: " + matricula);
         System.out.println("CV: " + cv);
         System.out.println("CC: " + cc);
-        System.out.println("Velocidad: " + velocidad + " km/h");
-        System.out.println("KM: " + km);
+
     }
+
     //especiales
+
+    public String getMarca() {
+        return marca;
+    }
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 
 
     public String getModelo() {
@@ -39,39 +48,47 @@ public class Coche {
         this.modelo = modelo;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public int getCv() {
-        return cv;
-    }
     public void setCv(int cv) {
         this.cv = cv;
     }
+    public int getCv() {
+        return cv;
+    }
 
-    public double getCc() {
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public int getCc() {
         return cc;
     }
-    public void setCc(double cc) {
+    public void setCc(int cc) {
         this.cc = cc;
     }
 
-    public double getVelocidad() {
+    public int getKm() {
+        return km;
+    }
+    public void setKm(int km) {
+        this.km = km;
+    }
+
+    public int getVelocidad() {
         return velocidad;
     }
-    public void setVelocidad(double velocidad) {
+    public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
     }
 
-    public double getKm() {
-        return km;
+    public int getAceleracion() {return aceleracion;}
+    public void setAceleracion(int aceleracion) {
+        this.aceleracion = aceleracion;
     }
-    public void setKm(double km) {
-        this.km = km;
-    }
+
+
 }
 
