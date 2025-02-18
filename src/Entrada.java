@@ -14,7 +14,7 @@ public class Entrada {
         int vueltas = 5;
         System.out.println("Ingrese las caractersitisticas del primer concursante ");
         System.out.println("");
-        /*
+
         System.out.println("Marca: ");
         coche1.setMarca(scanner.nextLine());
 
@@ -23,14 +23,20 @@ public class Entrada {
 
         System.out.println("Matricula: ");
         coche1.setMatricula(scanner.nextLine());
-        */
 
-        System.out.println("Caballos de Fuerza cv: ");
+
+        System.out.printf("Caballos de Fuerza cv del coche %s matricula %s: ", coche1.getModelo() , coche1.getMatricula());
         coche1.setCv(scanner.nextInt());
-        int cv = coche1.getCv();
-        System.out.println("Que cilindrada tiene: ");
+        System.out.println(" ");
+        //System.out.printf("Caballos de Fuerza cv del coche %s matricula%s : ", coche2.getModelo() , coche2.getMatricula());
+        //coche1.setCv(scanner.nextInt());
+        System.out.println(" ");
+        System.out.printf("Que cilindrada tiene el coche con matricula %s: ", coche1.getMatricula());
         coche1.setCc(scanner.nextInt());
-        int cc = coche1.getCc();
+
+        //System.out.printf("Que cilindrada tiene el coche con matricula %s: ", coche2.getMatricula());
+        //coche2.setCc(scanner.nextInt());
+
 
         System.out.println(" ");
         System.out.println(" ");
@@ -40,17 +46,25 @@ public class Entrada {
         System.out.println(" ");
         System.out.println(" ");
 
-        System.out.println(" A que velocidad quiere acelerar el coche con matricula sefsefses");
+        System.out.printf(" A que velocidad quiere acelerar el coche con  %s: ", coche1.getMatricula());
         coche1.setAceleracion(scanner.nextInt());
-        aceleracion.acelerar(coche1.getAceleracion(),5);
+        //System.out.printf(" A que velocidad quiere acelerar el coche con  %s: ", coche2.getMatricula());
+        //coche2.setAceleracion(scanner.nextInt());
+        //coche2.setAceleracion(scanner.nextInt());
+
+        aceleracion.acelerar(coche1.getAceleracion(),5,5);
+        //aceleracion.acelerar(coche2.getAceleracion(),5);
+
+
+        System.out.println(" ");
+        System.out.println(" ");
 
 
 
 
 
 
-
-        int  kilometros= coche1.getKm();
+        System.out.println("km es "+coche1.getKm());
 
     }
 
