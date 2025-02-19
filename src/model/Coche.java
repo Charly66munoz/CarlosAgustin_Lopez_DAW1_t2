@@ -40,7 +40,6 @@ public class Coche {
         this.marca = marca;
     }
 
-
     public String getModelo() {
         return modelo;
     }
@@ -54,7 +53,6 @@ public class Coche {
     public int getCv() {
         return cv;
     }
-
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
@@ -84,7 +82,9 @@ public class Coche {
         this.velocidad = velocidad;
     }
 
-    public int getAceleracion() {return aceleracion;}
+    public int getAceleracion() {
+        return aceleracion;
+    }
     public void setAceleracion(int aceleracion) {
         this.aceleracion = aceleracion;
     }

@@ -1,4 +1,5 @@
 import Controller.Aceleracion;
+import Controller.Carrera;
 import model.Coche;
 
 import java.util.Scanner;
@@ -9,9 +10,16 @@ public class Entrada {
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
         Aceleracion aceleracion = new Aceleracion();
+/*
+        Carrera vueltasKilometros = new Carrera();
+        System.out.println("Ingrese el numero de vueltas, cada vuelta tiene 120km  ");
+        vueltasKilometros.setVueltas(5);
+        vueltasKilometros.setKmTotales(100);*/
+
+
         Coche coche1 = new Coche();
         Coche coche2 = new Coche();
-        int vueltas = 5;
+
         System.out.println("Ingrese las caractersitisticas del primer concursante ");
         System.out.println("");
 
@@ -26,12 +34,14 @@ public class Entrada {
 
 
         System.out.printf("Caballos de Fuerza cv del coche %s matricula %s: ", coche1.getModelo() , coche1.getMatricula());
+        System.out.println(" ");
         coche1.setCv(scanner.nextInt());
         System.out.println(" ");
         //System.out.printf("Caballos de Fuerza cv del coche %s matricula%s : ", coche2.getModelo() , coche2.getMatricula());
         //coche1.setCv(scanner.nextInt());
         System.out.println(" ");
         System.out.printf("Que cilindrada tiene el coche con matricula %s: ", coche1.getMatricula());
+        System.out.println(" ");
         coche1.setCc(scanner.nextInt());
 
         //System.out.printf("Que cilindrada tiene el coche con matricula %s: ", coche2.getMatricula());
@@ -51,8 +61,8 @@ public class Entrada {
         //System.out.printf(" A que velocidad quiere acelerar el coche con  %s: ", coche2.getMatricula());
         //coche2.setAceleracion(scanner.nextInt());
         //coche2.setAceleracion(scanner.nextInt());
+        coche1.setKm(aceleracion.acelerar(coche1.getAceleracion(),5,5));
 
-        aceleracion.acelerar(coche1.getAceleracion(),5,5);
         //aceleracion.acelerar(coche2.getAceleracion(),5);
 
 
