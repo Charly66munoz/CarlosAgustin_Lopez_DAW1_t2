@@ -74,7 +74,7 @@ public class Carrera {
 
             for (int i = 1; i <= vueltas ; i++) {
 
-                System.out.println("Realizando vuelta numero: "+i);
+                System.out.println("Realizando aceleracion: "+i);
                 coche1.setKm(coche1.acelerar(coche1.getAceleracion(), i, vueltas));
                 coche2.setKm(coche2.acelerar(coche2.getAceleracion(), i, vueltas));
 
