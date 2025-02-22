@@ -1,4 +1,4 @@
-import Controller.Aceleracion;
+
 import Controller.Carrera;
 import model.Coche;
 
@@ -9,19 +9,20 @@ public class Entrada {
 
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
-        Aceleracion aceleracion = new Aceleracion();
-/*
-        Carrera vueltasKilometros = new Carrera();
-        System.out.println("Ingrese el numero de vueltas, cada vuelta tiene 120km  ");
-        vueltasKilometros.setVueltas(5);
-        vueltasKilometros.setKmTotales(100);*/
 
 
         Coche coche1 = new Coche();
         Coche coche2 = new Coche();
 
+        Carrera carrera = new Carrera();
+
+        System.out.println("Ingrese el numero de vueltas, cada vuelta tiene 60km  ");
+        carrera.setVueltas(scanner.nextInt());
+        scanner.nextLine();
+        carrera.setTotalkmrace(carrera.infoRace(carrera.getVueltas(), carrera.getKmPorVuetla()));
+
         System.out.println("Ingrese las caractersitisticas del primer concursante ");
-        System.out.println("");
+        System.out.println(" ");
 
         System.out.println("Marca: ");
         coche1.setMarca(scanner.nextLine());
@@ -32,49 +33,52 @@ public class Entrada {
         System.out.println("Matricula: ");
         coche1.setMatricula(scanner.nextLine());
 
-
+        System.out.println(" ");
         System.out.printf("Caballos de Fuerza cv del coche %s matricula %s: ", coche1.getModelo() , coche1.getMatricula());
         System.out.println(" ");
         coche1.setCv(scanner.nextInt());
         System.out.println(" ");
-        //System.out.printf("Caballos de Fuerza cv del coche %s matricula%s : ", coche2.getModelo() , coche2.getMatricula());
-        //coche1.setCv(scanner.nextInt());
-        System.out.println(" ");
         System.out.printf("Que cilindrada tiene el coche con matricula %s: ", coche1.getMatricula());
         System.out.println(" ");
         coche1.setCc(scanner.nextInt());
-
-        //System.out.printf("Que cilindrada tiene el coche con matricula %s: ", coche2.getMatricula());
-        //coche2.setCc(scanner.nextInt());
-
-
-        System.out.println(" ");
+        scanner.nextLine();
         System.out.println(" ");
 
-        coche1.mostrarValores();
+
+        System.out.println("Ingrese las caractersitisticas del segundo concursante ");
+        System.out.println(" ");
+
+        System.out.println("Marca: ");
+        coche2.setMarca(scanner.nextLine());
+
+        System.out.println("Modelo: ");
+        coche2.setModelo(scanner.nextLine());
+
+        System.out.println("Matricula: ");
+        coche2.setMatricula(scanner.nextLine());
 
         System.out.println(" ");
+        System.out.printf("Caballos de Fuerza cv del coche con matricula %s: ", coche2.getMatricula());
+        System.out.println(" ");
+        coche2.setCv(scanner.nextInt());
+        System.out.println(" ");
+        System.out.printf("Que cilindrada tiene el coche con matricula %s: ", coche2.getMatricula());
+        System.out.println(" ");
+        coche2.setCc(scanner.nextInt());
         System.out.println(" ");
 
-        System.out.printf(" A que velocidad quiere acelerar el coche con  %s: ", coche1.getMatricula());
+
+        System.out.printf("A que velocidad quiere acelerar el coche con  matricula Nº%s: ", coche1.getMatricula());
+        System.out.println(" ");
         coche1.setAceleracion(scanner.nextInt());
-        //System.out.printf(" A que velocidad quiere acelerar el coche con  %s: ", coche2.getMatricula());
-        //coche2.setAceleracion(scanner.nextInt());
-        //coche2.setAceleracion(scanner.nextInt());
-        coche1.setKm(aceleracion.acelerar(coche1.getAceleracion(),5,5));
-
-        //aceleracion.acelerar(coche2.getAceleracion(),5);
-
-
         System.out.println(" ");
+        System.out.printf("A que velocidad quiere acelerar el coche con  matricula Nº%s: ", coche2.getMatricula());
         System.out.println(" ");
+        coche2.setAceleracion(scanner.nextInt());
+
+        carrera.iniciarCarrera(coche1,coche2);
 
 
-
-
-
-
-        System.out.println("km es "+coche1.getKm());
 
     }
 
